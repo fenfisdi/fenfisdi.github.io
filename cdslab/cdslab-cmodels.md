@@ -1,5 +1,5 @@
 ---
-title: Cmodels
+title: Modelos Compartimentales
 parent: CDSLab
 nav_order: 1
 ---
