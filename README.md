@@ -1,0 +1,180 @@
+# CDSLab App
+
+Welcome to the **Contagious Disease Simulation Library (CDSLib)**.
+
+This is an open source initiative made available to researchers, decision
+makers and the general public.
+
+This projects aims to be a workplace for addressing different epidemic
+modelling frameworks, in order to tackle potential epidemics and related issues
+using open source high performance computing.
+
+We encourage other scientist to contribute to this project, so that complex
+models they produce are available not only for researching but for helping
+decision makers to take decisions based in the most advanced models.
+
+## Table of contents
+
+- [CDSLib](#cdslib)
+  - [Table of contents](#table-of-contents)
+  - [Available models](#available-models)
+    - [CDSLib_agents](#cdslib_agents)
+    - [Dinjo](#dinjo)
+  - [CDSLab](#cdslab)
+    - [Architectural diagram](#architectural-diagram)
+    - [CDSLab_auth](#cdslab_auth)
+    - [CDSLab_management](#cdslab_management)
+    - [CDSLab_users_api](#cdslab_users_api)
+    - [CDSLab_cmodels_api](#cdslab_cmodels_api)
+  - [How to contribute?](#how-to-contribute)
+  - [History](#history)
+    - [Why open source?](#why-open-source)
+  - [Who we are](#who-we-are)
+    - [Team](#team)
+  - [Sponsor information](#sponsor-information)
+  - [Partners](#partners)
+    - [Intergrupo](#intergrupo)
+    - [Servinformación](#servinformación)
+  - [Future Work](#future-work)
+
+## Available models
+
+### CDSLib_agents
+
+The [CDSLib_agents](https://github.com/fenfisdi/cdslib_agents) module
+implements an agent based model describing contagion dynamic in different
+scenarios, from small compartments to cities.
+
+### Dinjo
+
+The [Dijo](https://github.com/fenfisdi/dinjo) module serves as a framework
+to implement dynamical deterministic models describing epidemics, it provides
+optimization and enough generalization such that it can be used outside of the
+scope of CDSLib, meaning that it is not just an optimizer but a general tool which
+can be used broadly in the field of epidemics.
+
+## CDSLab
+
+This is the web application created for supporting the optimal deployment
+and use of CDSLib models for using High Performance Computing through
+[Google Cloud Platform](https://cloud.google.com/).
+
+### Architectural diagram
+
+![arch-diagram](./assets/ArchitecturalDiagram-CDSLab-CDSLib.png "Architectural diagram for CDSLab + CDSLib")
+
+### CDSLab_auth
+
+The [CDSLab_auth](https://github.com/fenfisdi/cdslab_auth) module
+implements an authentication/authorization API for CDSLab.
+
+### CDSLab_management
+
+The [CDSLab_management](https://github.com/fenfisdi/cdslab_management) module
+implements an admin/settings API for CDSLab.
+
+### CDSLab_users_api
+
+The [CDSLab_users_api](https://github.com/fenfisdi/cdslab_users_api) module
+implements users' CRUD operations API for CDSLab.
+
+### CDSLab_cmodels_api
+
+The [CDSLab_cmodels_api](https://github.com/fenfisdi/cdslab_cmodels_api) module
+implements an API for CDSLab consumption of
+[Dijo](https://github.com/fenfisdi/dinjo) module.
+
+## How to contribute?
+
+Please review our [contributing document](./contributing.md)
+
+## History
+
+This projects began as a voluntary initiative from some members of the
+[Fundamentals and Teaching of Physics and Dynamical Systems Group (FEnFiSDi)](https://fenfisdi.weebly.com)
+from **Universidad de Antioquia (UdeA)** in March 2020 to bring our technical and
+theoretical skills on natural systems modelling to the emerging sanitary thread
+posed by the COVID-19 pandemic. After joining forces with the
+**Epidemiology Group** of UdeA and recruiting more members of our research
+group, we began a new phase with funding from the
+**National Ministry of Science and Technology** and the
+**National Learning Service**.
+
+### Why open source?
+
+We believe in the transformative power science has in society.
+We are committed to bring scientific knowledge to society and this is our
+way to help during this challenging scenario we are facing as humanity.
+
+## Who we are
+
+We are the **Fundamentals and Teaching of Physics and Dynamical Systems Group**
+from Universidad de Antioquia in Medellin, Colombia. Our work ranges from
+research to science education. Our research has centered on gene regulatory
+networks, evolution of behaviour, city dynamics, weather and information theory.
+Visit our page for further information:
+[Fundamentos y Enseñanza de la Física y los Sistemas Dinámicos](https://fenfisdi.weebly.com)
+
+### Team
+
+- Boris Rodriguez, Physics Professor, Universidad de Antioquia
+  - [CvLAC](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000057681)
+  - [Perfil en Google Scholar](https://scholar.google.com/citations?user=swUKsPkAAAAJ&hl=es)
+- Isabel Hoyos, Physics Professor, Universidad del Quindío
+  - [CvLAC](https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000236594)
+  - [Perfil en Google Scholar](https://scholar.google.com/citations?user=YzeNe7EAAAAJ&hl=es)
+- Paula Díaz, Public Health Professor, Universidad de Antioquia
+  - [CvLAC](https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000168785)
+  - [@diazpaula](https://twitter.com/diazpaula)
+- Gloria Machado, Biology Professor, Universidad de Antioquia
+  - [CvLAC](https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000028061)
+- Camilo Hincapié, Data Scientist, Physics MSc, Universidad de Antioquia
+  - [CvLAC](https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001494583)
+  - [Perfil en LinkedIn](https://www.linkedin.com/in/camilo-hincapie-gutierrez/)
+- Lina Ruiz, Biology MSc Student
+- Mariana  Jaramillo, Physicist
+- Ian Mejía, Physicist
+  - [CvLAC](https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001870820)
+  - [Perfil en LinkedIn](https://www.linkedin.com/in/ian-nicol%C3%A1s-ram%C3%ADrez-mej%C3%ADa-61aaa220b/)
+- Nicole Rivera, Physics BSc Student
+- Juan Esteban Aristizábal, Physics BSc
+- Luis Papiernik, Physics BSc Student
+- Elkin Bonet, Public Health MSc Student
+- Sebastián Espejo, Biologist, UdeA
+- Shirley Cárcamo, Biologist, UdeA
+- Óscar Mendoza, Public Health MSc Student
+- Carolina Rojas, Astronomy BSc Student
+- Juan Pablo Pérez
+- Sofía Sánchez, Biology BSc Student
+- Andrea Sánchez, Public Health BSc Student
+- Alejandro Campillo Barrios, Bioengineering BSc Student
+- Elías De Vargas, Systems Engineer
+
+## Sponsor information
+
+For more information on our current sponsors visit:
+
+- [National Ministry of Science and Technology of Colombia](https://minciencias.gov.co/)
+- [National Learning Service (SENA)](https://www.sena.edu.co)
+
+## Providers
+
+Special thanks to our providers who contribute their expertise to develop this
+library and platform at a professional level.
+
+### Intergrupo
+
+[Intergrupo](https://intergrupo.com/)
+
+### Servinformación
+
+[Servinformación](https://servinformacion.com)
+
+## Future Work
+
+We pretend to extend our work beyond the COVID-19 pandemic to different
+diseases currently affecting human health or epidemics yet to come.
+According to the
+*Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services*,
+future pandemics are expected to happen more often
+[https://www.ipbes.net/pandemics-media-release](https://www.ipbes.net/pandemics-media-release).
