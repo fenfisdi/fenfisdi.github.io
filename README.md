@@ -1,6 +1,4 @@
-# CDSLab App
-
-Welcome to the **Contagious Disease Simulation Library (CDSLib)**.
+# Home
 
 This is an open source initiative made available to researchers, decision
 makers and the general public.
