@@ -4,6 +4,3 @@ aux_links:
     - "//github.com/fenfisdi/cdslab"
 remote_theme: pmarsceill/just-the-docs
 #theme: "just-the-docs"
-
-plugins:
-  -jekyll-seo-tag
