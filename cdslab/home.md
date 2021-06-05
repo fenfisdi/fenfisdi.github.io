@@ -1,7 +1,7 @@
 ---
 title: CDSLab
 has_children: true
-nav_order: 3
+nav_order: 2
 ---
 
 # Componentes de CDSLab
@@ -41,3 +41,55 @@ fruto del esfuerzo de uno de nuestros estudiantes e investigador, __Juan Esteban
 Aristizabal__.
 
 #### Modelos Compartimentales
+Modelos compartimentales se basa en los fundamentos sólidos de Dinjo, haciendo uso de
+sus generalidades para implementar un conjunto esencial de modelos de ecuaciones
+diferenciales, los cuales se ofrecen al modelador con el fin de brindar un entorno rápido
+y fácil de utilizar, que se configura a través de parámetros de acuerdo al tipo de modelo.
+En este momento, haciendo uso de Dinjo se posee una implementación de los siguientes
+modelos:
+- SIR
+- SIRV
+- SEIRV
+- Y una versión modificada de SEIRV que surge en el seno de nuestro equipo.
+
+## Interfaz de usuario
+
+Nuestros modelos computacionales además de poseer bases algorítmicas funcionales y que
+pueden utilizadas de forma independiente y manipuladas mediante su interface en Python,
+poseen además una plataforma web, en la cual los investigadores podrán crear una cuenta y
+realizar las simulaciones deseadas. Esta plataforma web también se brinda como parte del
+proyecto de código abierto y puede ser implementada de forma directa siguiendo las
+instrucciones adjuntas en cada uno de sus módulos. Para realizar esta tarea de la forma
+deseada, hemos dispuesto de un tipo de arquitectura de software conocida como
+__Arquitectura por Microservicios__ que consiste en la creación de pequeños módulos que
+funcionan de forma independiente pero hacen uso estructurado de los demás recursos para
+permitir así un entorno estable, seguro y fácil de mantener a largo plazo.
+
+Nuestra interfaz está compuesta por los microservicios mencionados a continuación
+
+### CDSLab_auth
+El módulo [CDSLab_auth](https://github.com/fenfisdi/cdslab_auth), quien es el encargado de
+brindar la seguridad necesaria para la autenticación/autorización del ingreso a la
+plataforma web.
+
+### CDSLab_management
+
+El módulo [CDSLab_management](https://github.com/fenfisdi/cdslab_management) quien es el
+encargado de proveer fácilidad de configuración del entorno en que se realizan las
+simulaciones. Realiza tareas desde la manipulación de las plantillas de correo que se
+envían a los usuarios a modo de notificación, como el manejo automático del almacenamiento
+del dispositivo.
+
+### CDSLab_users_api
+
+El módulo [CDSLab_users_api](https://github.com/fenfisdi/cdslab_users_api) quien es el
+encargado de permitir operaciones de manipulación sobre las bases de datos de usuarios, se
+encarga de tareas como modificar el estado de un usuario, encontrar su localización en el
+almacenamiento local y demás.
+
+### CDSLab_cmodels_api
+
+El módulo [CDSLab_cmodels_api](https://github.com/fenfisdi/cdslab_cmodels_api) quien es el
+encargado de implementar la interfaz gráfica de los modelos compartimentales, hace uso
+extensivo de Dinjo para permitir implementar modelos predeterminados que faciliten un
+rápido y efectivo modelamiento.
