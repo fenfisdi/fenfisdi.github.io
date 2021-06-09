@@ -1,2 +1,7 @@
 _site
 .jekyll-cache
+assets
+_layouts
+_sass
+lib
+
