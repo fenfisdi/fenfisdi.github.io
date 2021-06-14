@@ -93,13 +93,17 @@ del dispositivo.
 
 ### CDSLab ErrorLog
 
-... // TODO
-
+El módulo [CDSLab_error_log](https://github.com/fenfisdi/cdslab_error_log) quien es el
+encargado de registrar de forma estructurada los errores que se presentan en la ejecución
+de los intrincados procedimientos ocurridos en CDSLib, permitiendo así que se realice un
+seguimiento adecuado de cualquier falla posible, y darles la solución apropiada.
 
 ### CDSLab File
 
-... // TODO
-
+El módulo [CDSLab_file_api](https://github.com/fenfisdi/cdslab_file_api) quien es el
+encargado de dar estructura al almacenamiento de archivos que se requieren para las
+simulaciones. De forma sincrónica, permite el intercambio de archivos entre la plataforma
+y el usuario.
 
 ### CDSLab CModels
 
@@ -110,9 +114,15 @@ rápido y efectivo modelamiento.
  
 ### CDSLab Agents
 
-// TODO
-cdslab_agents_config, api_cloud y cdslab_agents_simulation
-
-
-
-
+Dada la gran complejidad de los modelos basados en agentes, la interfaz de usuario que se
+provee para los modelos basados en agentes se encuentra compuesta por 3 módulos
+principales:
+- [CDSLab_agents_config](https://github.com/fenfisdi/cdslab_agents_config_api) quien es el
+  encargado de permitir realizar la configuración de todos los parámetros atribuidos a los
+modelos basados en agentes.
+- [CDSLab_api_cloud](https://github.com/fenfisdi/cdslab_api_cloud) quien es el encargado
+  de comunicar los parámetros y activar las máquinas virtuales en la nube con las
+capacidades requeridas para realizar el cómputo con los parámetros solicitados.
+- [CDSLab_agents_simulation](https://github.com/fenfisdi/cdslab_agents_simuliation_api)
+  quien es el encargado de comunicarse de forma directa con la librería de
+[CDSLib_agents](https://github.com/fenfisdi/cdslib_agents).
