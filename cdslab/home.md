@@ -6,9 +6,9 @@ nav_order: 2
 
 # Componentes de CDSLab
 
-Bienvenidos a la documentación oficial de la plataforma CDSLab, desarrollada por el grupo
-FEnFiSDi como una iniciativa de código abierto para brindar herramientas de soporte para
-investigadores, equipos de toma de decisiones y el público en general interesado en el
+Bienvenidos a la documentación oficial de la plataforma [CDSLab](https://github.com/fenfisdi/cdslab),
+desarrollada por el grupo FEnFiSDi como una iniciativa de código abierto para brindar herramientas
+de soporte para investigadores, equipos de toma de decisiones y el público en general interesado en el
 modelamiento de enfermedades contagiosas.
 
 Este proyecto busca convertirse en un entorno de trabajo que brinde diversas herramientas
@@ -65,14 +65,24 @@ __Arquitectura por Microservicios__ que consiste en la creación de pequeños m�
 funcionan de forma independiente pero hacen uso estructurado de los demás recursos para
 permitir así un entorno estable, seguro y fácil de mantener a largo plazo.
 
-Nuestra interfaz está compuesta por los microservicios mencionados a continuación
+// TODO: agregar diagrama de arquitectura
 
-### CDSLab_auth
+Nuestra interfaz se puede encontrar en el repositorio [CDSLab_webpage](https://github.com/fenfisdi/cdslab_webpage)
+y está soportada por los microservicios mencionados a continuación
+
+### CDSLab Users
+
+El módulo [CDSLab_users_api](https://github.com/fenfisdi/cdslab_users_api) quien es el
+encargado de permitir operaciones de manipulación sobre las bases de datos de usuarios, se
+encarga de tareas como modificar el estado de un usuario, encontrar su localización en el
+almacenamiento local y demás.
+
+### CDSLab Auth
 El módulo [CDSLab_auth](https://github.com/fenfisdi/cdslab_auth), quien es el encargado de
 brindar la seguridad necesaria para la autenticación/autorización del ingreso a la
 plataforma web.
 
-### CDSLab_management
+### CDSLab Management
 
 El módulo [CDSLab_management](https://github.com/fenfisdi/cdslab_management) quien es el
 encargado de proveer fácilidad de configuración del entorno en que se realizan las
@@ -80,16 +90,29 @@ simulaciones. Realiza tareas desde la manipulación de las plantillas de correo 
 envían a los usuarios a modo de notificación, como el manejo automático del almacenamiento
 del dispositivo.
 
-### CDSLab_users_api
 
-El módulo [CDSLab_users_api](https://github.com/fenfisdi/cdslab_users_api) quien es el
-encargado de permitir operaciones de manipulación sobre las bases de datos de usuarios, se
-encarga de tareas como modificar el estado de un usuario, encontrar su localización en el
-almacenamiento local y demás.
+### CDSLab ErrorLog
 
-### CDSLab_cmodels_api
+... // TODO
+
+
+### CDSLab File
+
+... // TODO
+
+
+### CDSLab CModels
 
 El módulo [CDSLab_cmodels_api](https://github.com/fenfisdi/cdslab_cmodels_api) quien es el
 encargado de implementar la interfaz gráfica de los modelos compartimentales, hace uso
 extensivo de Dinjo para permitir implementar modelos predeterminados que faciliten un
 rápido y efectivo modelamiento.
+ 
+### CDSLab Agents
+
+// TODO
+cdslab_agents_config, api_cloud y cdslab_agents_simulation
+
+
+
+
