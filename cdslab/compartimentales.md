@@ -318,13 +318,9 @@ El usuario puede elegir entre dos tipos de simulaciones, parámetros fijos o aju
 
 Este tipo de simulación permite al usuario asignar un valor numérico a los parámetros del modelo elegido (ver sección parámetros). 
 
-"RECORDAR: agregar la estructura de imágenes + texto con instrucciones de uso" 
-
     2. **Ajuste de parámetros**
 
-Este tipo de simulación permite al usuario elegir qué parámetros del modelo elegido desea ajustar, usando un algoritmo evolutivo de optimización a los datos que seleccione entre las fuentes de datos disponibles. 
-
-"RECORDAR: agregar la estructura de imágenes + texto con instrucciones de uso" 
+Este tipo de simulación permite al usuario elegir qué parámetros del modelo elegido desea ajustar, usando un algoritmo evolutivo de optimización a los datos que seleccione entre las fuentes de datos disponibles.  
 
 2. **Fuentes de datos** 
 
