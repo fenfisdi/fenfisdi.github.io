@@ -1,7 +1,7 @@
 ---
 title: Modelos Compartimentales
 parent: CDSLab
-nav_order: 1
+nav_order: 2
 ---
 
 # Modelos compartimentales
