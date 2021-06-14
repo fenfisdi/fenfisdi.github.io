@@ -9,107 +9,64 @@ nav_order: 2
 **Tabla de contenido**
 
 1. Descripción de los modelos compartimentales disponibles
-
     1. Modelo SIR
-
     2. Modelo SEIR
-
     3. Modelo SEIRV
 
 2. Características de las variables de estado de los modelos
-
     4. Susceptibles (S)** **
-
     5. Expuestos (E)
-
     6. Infectados (I)
-
     7. Recuperados (R)
-
     8. Virus (V)
 
 3. Descripción de los parámetros de cada modelo
-
     9. Modelo SIR
-
         1. Tasas de entrada al sistema / Proporción de Natalidad
-
         2. Proporción de muerte natural / Tasa de salidas del sistema
-
         3. Proporción de muerte debida a la enfermedad
-
         4. Tasa de transmisión 
-
         5. Tasa de vacunación 
-
         6. Tasa de recuperación 
-
         7. Tasa de reinfección
-
         8. Tasa de pérdida de inmunidad
 
     10. Modelo SEIR
-
         9. Tasa de entradas al sistema / Proporción de Natalidad
-
         10. Proporción de muerte natural / Tasa de salidas del sistema
-
         11. Periodo de incubación
-
         12. Tasa de muerte debida a la enfermedad
-
         13. Tasa de vacunación 
-
         14. Tasa de recuperación 
-
         15. Constante de transmisión entre S y E
-
         16. Constante de transmisión entre S e I
 
     11. Modelo SEIRV
-
         17. Proporción de Natalidad
-
         18. Proporción de muerte natural
-
         19. Periodo de incubación 
-
         20. Proporción de muerte debida a la enfermedad
-
         21. Tasa de recuperación 
-
         22. Tasa de dispersión del virus por personas Expuestas
-
         23. Tasa de dispersión del virus por personas Infectadas
-
         24. Tasa de remoción del virus
-
         25. Constante de transmisión entre S y E
-
         26. Constante de transmisión entre S e I
-
         27. Constante de transmisión entre S y V
-
         28. Coeficiente de ajuste de transmisión 
 
 4. Instrucciones para realizar la simulación
-
     12. Tipos de simulación
-
         29. Parámetros fijos
-
         30. Ajuste de parámetros 
 
     13. Fuentes de datos
-
         31. Datos propios
-
         32. Datos del INS para COVID19
 
 5. Consideraciones matemáticas de los modelos
 
 6. Cómo interpretar los resultados del modelo 
-
     14. Archivos finales de la plataforma
 
 7. Observaciones adicionales del equipo FenFiSDi. 
