@@ -2,5 +2,5 @@ logo: "/assets/images/fenfisdi.png"
 aux_links:
   "CDSLab en Github":
     - "//github.com/fenfisdi/cdslab"
-#remote_theme: pmarsceill/just-the-docs
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
+#theme: just-the-docs

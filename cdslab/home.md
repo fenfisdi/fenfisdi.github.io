@@ -11,8 +11,8 @@ FEnFiSDi como una iniciativa de código abierto para brindar herramientas de sop
 investigadores, equipos de toma de decisiones y el público en general interesado en el
 modelamiento de enfermedades contagiosas.
 
-Este proyecto busca convertirse en un entorno de trabajo que brinde diversos entornos para
-el modelamiento epidémico, usando herramientas de código abierto y cómputo de alto
+Este proyecto busca convertirse en un entorno de trabajo que brinde diversas herramientas
+en el modelamiento epidémico, usando herramientas de código abierto y cómputo de alto
 rendimiento.
 
 Como grupo y proyecto de código abierto buscamos de forma constante contribuyentes, por lo
@@ -25,8 +25,8 @@ contribuir a unirse a nuestros esfuerzos por producir una herramienta libre y ef
 
 El módulo [CDSLib_agents](https://github.com/fenfisdi/cdslib_agents) permite la
 implementación de modelos basados en agentes para el estudio de las dinámicas de contagio
-en diversos escenarios, su diversidad y generalismo permiten simular desde espacios
-pequeños como un parque hasta la totalidad de una ciudad.
+en diversos escenarios. Su diversidad y generalismo permiten simular desde espacios
+pequeños(como un parque) hasta la totalidad de una ciudad.
 
 ### Dinjo y Modelos Compartimentales
 
@@ -36,7 +36,7 @@ de solución de modelos compartimentales, permitiendo implementar modelos determ
 describan epidemias, de forma eficiente y optimizada. Provee suficiente generalización
 para ser utilizado más allá del alcance de CDSLib, ya que no es únicamente un optimizador
 de ecuaciones diferenciales, sino que representa un conjunto de herramientas que pueden
-ser utilizadas de forma amplia en el campo del modelamiento epidemiológico. Dinjo es el
+ser utilizadas de forma amplia en el campo de solución de ecuaciones diferenciales. Dinjo es el
 fruto del esfuerzo de uno de nuestros estudiantes e investigador, __Juan Esteban
 Aristizabal__.
 
@@ -56,7 +56,7 @@ modelos:
 
 Nuestros modelos computacionales además de poseer bases algorítmicas funcionales y que
 pueden utilizadas de forma independiente y manipuladas mediante su interface en Python,
-poseen además una plataforma web, en la cual los investigadores podrán crear una cuenta y
+cuentan con una plataforma web, en la cual los investigadores podrán crear una cuenta y
 realizar las simulaciones deseadas. Esta plataforma web también se brinda como parte del
 proyecto de código abierto y puede ser implementada de forma directa siguiendo las
 instrucciones adjuntas en cada uno de sus módulos. Para realizar esta tarea de la forma
