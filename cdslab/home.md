@@ -65,7 +65,9 @@ __Arquitectura por Microservicios__ que consiste en la creación de pequeños m�
 funcionan de forma independiente pero hacen uso estructurado de los demás recursos para
 permitir así un entorno estable, seguro y fácil de mantener a largo plazo.
 
-// TODO: agregar diagrama de arquitectura
+
+ ![Arquitectura](arquitectura.png)
+
 
 Nuestra interfaz se puede encontrar en el repositorio [CDSLab_webpage](https://github.com/fenfisdi/cdslab_webpage)
 y está soportada por los microservicios mencionados a continuación
