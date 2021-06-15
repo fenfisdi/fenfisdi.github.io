@@ -192,3 +192,75 @@ El usuario que elige la opción de ingresar datos propios debe tener en cuenta e
     4. **Datos del INS para COVID19**
 
 Teniendo en cuenta la emergencia sanitaria por COVID19 en Colombia, el Instituto Nacional de Salud construyó una estrategia para el registro y rastreo de todos los casos positivos de COVID19 desde la detección del primer infectado en marzo 3 de 2020 (agregar referencia).
+
+
+## Referencias
+
+<a id="ref11">11</a>: Rahimi I, Chen F, Gandomi AH. A review on COVID-19 forecasting models. Neural Comput Appl. 2021 Feb 4;1–11.
+    [↩](#backref11)
+
+<a id="ref12">12</a>: Brauer F, Castillo-Chavez C, Feng Z. Endemic disease models. In: Texts in Applied Mathematics. New York, NY: Springer New York; 2019. p. 63–116. (Texts in applied mathematics).  
+    [↩](#backref12)
+
+<a id="ref13">13</a>: Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM. Mathematical modeling as a tool for policy decision making: Applications to the COVID-19 pandemic. In: Handbook of Statistics. Elsevier; 2021. p. 291–326. (Handbook of statistics).  
+    [↩](#backref13)
+
+<a id="ref14">14</a>: Massonis G, Banga JR, Villaverde AF. Structural identifiability and observability of compartmental models of the COVID-19 pandemic. Annu Rev Control [Internet]. 2020 Dec 21; Available from: http://dx.doi.org/10.1016/j.arcontrol.2020.12.001  
+    [↩](#backref14)
+
+<a id="ref15">15</a>: Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257.  
+    [↩](#backref15)
+
+<a id="ref16">16</a>: Keeling MJ, Rohani P. Modeling Infectious Diseases in Humans and Animals. Princeton University Press; 2008. 366 p.  
+    [↩](#backref16)
+
+<a id="ref17">17</a>: Piqueira JRC. Rumor propagation model: An equilibrium study. Math Probl Eng. 2010;2010:1–7.  
+    [↩](#backref17)
+
+<a id="ref18">18</a>: Brauer F, van den Driessche P, Wu J. Mathematical Epidemiology. Springer Science & Business Media; 2008. 414 p.  
+    [↩](#backref18)
+
+<a id="ref19">19</a>: Yan P, Chowell G. Quantitative Methods for Investigating Infectious Disease Outbreaks [Internet]. Texts in Applied Mathematics. 2019. Available from: http://dx.doi.org/10.1007/978-3-030-21923-9  
+    [↩](#backref19)
+
+<a id="ref20">20</a>: Guan J, Wei Y, Zhao Y, Chen F. Modeling the transmission dynamics of COVID-19 epidemic: a systematic review. J Biomed Res. 2020 Oct 30;34(6):422–30.  
+    [↩](#backref20)
+
+<a id="ref21">21</a>: Pribylova L, Hajnova V. SEIAR model with asymptomatic cohort and consequences to efficiency of quarantine government measures in COVID-19 epidemic [Internet]. 2020 [cited 2021 Mar 31]. Available from: http://arxiv.org/abs/2004.02601  
+    [↩](#backref21)
+
+<a id="ref22">22</a>: Victor Okhuese A. Estimation of the Probability of Reinfection With COVID-19 by the Susceptible-Exposed-Infectious-Removed-Undetectable-Susceptible Model. JMIR Public Health Surveill. 2020 May 13;6(2):e19097.  
+    [↩](#backref22)
+
+<a id="ref23">23</a>: Zhao S, Chen H. Modeling the epidemic dynamics and control of COVID-19 outbreak in China. Quant Biol. 2020 Mar 11;1–9.  
+    [↩](#backref23)
+
+<a id="ref24">24</a>: Giordano G, Blanchini F, Bruno R, Colaneri P, Di Filippo A, Di Matteo A, et al. Modelling the COVID-19 epidemic and implementation of population-wide interventions in Italy. Nat Med. 2020 Jun;26(6):855–60.  
+    [↩](#backref24)
+
+<a id="ref25">25</a>: Fosu GO, Opong JM, Appati JK. Construction of compartmental models for COVID-19 with quarantine, lockdown and vaccine interventions. SSRN Electron J [Internet]. 2020; Available from: https://www.ssrn.com/abstract=3574020  
+    [↩](#backref25)
+
+<a id="ref26">26</a>: Chen S, Robinson P, Janies D, Dulin M. Four Challenges Associated With Current Mathematical Modeling Paradigm of Infectious Diseases and Call for a Shift. Open Forum Infect Dis. 2020 Aug;7(8):ofaa333.  
+    [↩](#backref26)
+
+<a id="ref27">27</a>: Railsback SF, Grimm V. Agent-Based and Individual-Based Modeling: A Practical Introduction, Second Edition. Princeton University Press; 2019.  
+    [↩](#backref27)
+
+<a id="ref28">28</a>: Cuevas E. An agent-based model to evaluate the COVID-19 transmission risks in facilities. Comput Biol Med. 2020 Jun;121:103827.  
+    [↩](#backref28)
+
+<a id="ref29">29</a>: Hoertel N, Blachier M, Blanco C, Olfson M, Massetti M, Rico MS, et al. A stochastic agent-based model of the SARS-CoV-2 epidemic in France. Nat Med. 2020 Sep;26(9):1417–21.  
+    [↩](#backref29)
+
+<a id="ref30">30</a>: Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM. Mathematical modeling as a tool for policy decision making: Applications to the COVID-19 pandemic [Internet]. Handbook of Statistics. 2021. p. 291–326. Available from: http://dx.doi.org/10.1016/bs.host.2020.12.001  
+    [↩](#backref30)
+
+<a id="ref31">31</a>: Truszkowska A, Behring B, Hasanyan J, Zino L, Butail S, Caroppo E, et al. COVID‐19 Modeling: High‐Resolution Agent‐Based Modeling of COVID‐19 Spreading in a Small Town (Adv. Theory Simul. 3/2021) [Internet]. Vol. 4, Advanced Theory and Simulations. 2021. p. 2170005. Available from: http://dx.doi.org/10.1002/adts.202170005  
+    [↩](#backref31)
+
+<a id="ref32">32</a>: Gaudou B, Huynh NQ, Philippon D, Brugière A, Chapuis K, Taillandier P, et al. COMOKIT: A Modeling Kit to Understand, Analyze, and Compare the Impacts of Mitigation Policies Against the COVID-19 Epidemic at the Scale of a City [Internet]. Vol. 8, Frontiers in Public Health. 2020. Available from: http://dx.doi.org/10.3389/fpubh.2020.563247  
+    [↩](#backref32)
+
+<a id="ref33">33</a>: Mahdizadeh Gharakhanlou N, Hooshangi N. Spatio-temporal simulation of the novel coronavirus (COVID-19) outbreak using the agent-based modeling approach (case study: Urmia, Iran). Inform Med Unlocked. 2020 Jul 30;20:100403.  
+    [↩](#backref33)
