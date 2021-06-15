@@ -72,14 +72,11 @@ recuperarse o morir (ver [Figura 1](#fig1) costado izquierda). El tránsito y en
 las variables de estado depende de elementos del modelo llamados parámetros que condicionan el cambio
 entre, por ejemplo, el estado infectado al recuperado (ver [Figura 1](#fig1) costado derecha).
 
-![Figura 1](Figura1.png)
-*__Figura 1:__ Representación de los elementos de un modelo epidemiológico para describir la progresión de la enfermedad en los individuos en un caso en el cual, una vez los individuos sanos se infectan, pueden recuperarse o morir. A mano izquierda están destacadas en negrilla las variables de estado, que para este ejemplo serían las variables de estado Susceptibles, Infectados y Recuperado. A mano derecha están descritos los parámetros específicos para este modelo que serían la taas de infección, la tasa de recuperación, la tasas de pérdida de inmunidad y la tasa de mortalidad.*
+![Figura 1](./images/Figura1.png)  
+*__<a id="fig1">Figura 1</a>:__ Representación de los elementos de un modelo epidemiológico para describir la progresión de la enfermedad en los individuos en un caso en el cual, una vez los individuos sanos se infectan, pueden recuperarse o morir. A mano izquierda están destacadas en negrilla las variables de estado, que para este ejemplo serían las variables de estado Susceptibles, Infectados y Recuperado. A mano derecha están descritos los parámetros específicos para este modelo que serían la taas de infección, la tasa de recuperación, la tasas de pérdida de inmunidad y la tasa de mortalidad.*
 
 Diferentes tipos de modelos epidemiológicos abordan el sistema a diferentes escalas de resolución como es
 común entre los modelos usados para representar dinámicas poblacionales. Este tipo de resolución es específica al nivel de separación o unión que hace el modelador sobre los elementos constituyentes del sistema y recibe el nombre de granularidad. Es así como un fenómeno epidemiológico puede ser representado por modelos que describen la dinámica de la población en términos de: el resultado del comportamiento de cada uno de sus individuos (microescala) o modelos de granularidad alta; la interacción de ensambles de individuos (mesoescala) o modelos de granularidad media; o el flujo entre grandes subgrupos poblacionales (macroescala) o granularidad baja. (Ver Figura 1) 
-
-
-
 
 Figura 1. Representación de la granularidad, resolución o nivel de detalle con el que los modelos computacionales pueden abordar un fenómeno poblacional como una epidemia. A una escala baja de granularidad, o microescala, se busca representar al individuo, el comportamiento poblacional surge como una combinación de los comportamientos individuales. A una escala de granularidad intermedia, o mesoescala, se representan ensambles o agrupaciones de individuos y el comportamiento de la agrupación suele representarse como el comportamiento promedio de los individuos representados en la agrupación. A un nivel de detalle menor, o macroescala, el fenómeno es descrito como cambios o flujos entre subpoblaciones o compartimientos poblacionales.
 
