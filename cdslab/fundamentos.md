@@ -6,30 +6,76 @@ nav_order: 1
 
 # Fundamentos de modelación epidemiológica
 
+## Introducción
+
 Los modelos son herramientas esenciales en el quehacer de todas las disciplinas científicas, 
-consisten en representaciones de fenómenos, situaciones o partes de ellos [^1] y sus utilidades 
+consisten en representaciones de fenómenos, situaciones o partes de ellos y sus utilidades 
 varían de acuerdo a la finalidad con la que se diseñan. Es así cómo pueden servir para describir
-un fenómeno, emplearse como herramientas explicativas o como vehículos de aprendizaje (1), usarse
+un fenómeno, emplearse como herramientas explicativas o como vehículos de aprendizaje, usarse
 como experimentos científicos, permitir predecir o controlar una realidad y hacer las veces
-de herramienta de exploración epistémica al permitir descubrir nuevos objetos de estudio (2).
+de herramienta de exploración epistémica al permitir descubrir nuevos objetos de estudio
+<sup id="backref1">[1](#ref1)</sup> <sup id="backref2">[2](#ref2)</sup>.
 
-Los modelos computacionales en particular posibilitan plantear, evaluar y conjeturar respuestas a diferentes escenarios que no pueden ser explorados a través de las observaciones al mundo real, esto se deriva de los marcos flexibles sobre los que se simula una realidad virtual dado que la construcción conceptual sobre las que se cimientan no es fija. 
+Los modelos computacionales en particular posibilitan plantear, evaluar y conjeturar
+respuestas a diferentes escenarios que no pueden ser explorados a través de las observaciones
+al mundo real; esto se deriva de los marcos flexibles sobre los que se simula una realidad
+virtual dado que la construcción conceptual sobre las que se cimientan no es fija.
 
-Los modelos en la epidemiología
-Los modelos epidemiológicos han llevado a la comprensión de las propiedades de enfermedades infecciosas, que en consecuencia, han sido esenciales para la toma de decisiones políticas. Usualmente, son dos las propiedades que buscan describir los modelos epidemiológicos, por un lado buscan representar cómo progresa la enfermedad en cada individuo (historia natural) y cómo se disemina en la población (dinámicas de contagio). Hoy en día existen varias aproximaciones computacionales para describir procesos epidémicos. Además de los modelos compartimentales basados en ecuaciones diferenciales ordinarias, con más de cien años de historia, y sus sofisticaciones, existen otras aproximaciones metodológicas como lo son los modelos estocásticos, los modelos basados en datos y los modelos basados en agentes.
-Historia
-Los modelos matemáticos en epidemiología nacen con los modelos compartimentales (ver sección Modelos compartimentales). Durante las primeras décadas del siglo XX, no solo ocurrió una catastrófica pandemia de influenza acompañada de recurrentes brotes de otras enfermedades infecciosas alrededor del mundo como el cólera, tifo o peste. También durante estos años fue que se desarrollaron los primeros modelos matemáticos epidemiológicos. La formulación de estos modelos fue posible luego de que fueran establecidos algunos patrones básicos a los brotes epidémicos como la relación entre la propagación de la epidemia con el número de personas susceptibles y de personas infecciosas (3)(4).
+## Los modelos en la epidemiología
 
-El trabajo de Ross en malaria (1911) fue un trabajo pionero(5) al matematizar por medio de un conjunto de ecuaciones la dinámica de la relación entre el número de infectados y el número de mosquitos en el ambiente, principio que si bien hoy resulta casi que intuitivo, en la época era imposible de establecer a simple vista. Posteriormente, la colaboración entre Ross y la matemática Hilda Hudson (1916) permitió comprender los patrones para diseñar diferentes modelos. Gracias a estos desarrollos, se formaliza la epidemiología matemática con el trabajo de MacKendrick y Kermack (1927) quienes consolidaron este concepto, proponiendo un modelo que relaciona la propagación con el número de personas susceptibles e infectadas(6). Para lograrlo, separaron a la población en compartimientos o grupos según el estado infeccioso de los individuos, es decir, en los grupos susceptibles, infectados y recuperados, el tránsito entre los compartimientos se formuló a través de ecuaciones diferenciales ordinarias. 
+Los modelos epidemiológicos han llevado a la comprensión de las propiedades de enfermedades
+infecciosas, que en consecuencia, han sido esenciales para la toma de decisiones políticas.
+Usualmente son dos las propiedades que buscan describir los modelos epidemiológicos: por
+un lado buscan representar cómo progresa la enfermedad en cada individuo (historia natural)
+y por otro lado, buscan describir cómo se disemina la enfermedad en la población
+(dinámicas de contagio).
 
-Para algunos investigadores, los fundamentos de las intervenciones en salud pública nacen con los modelos compartimentales debido a que permiten resolver preguntas sobre el número de infectados y el tiempo que puede durar un brote epidémico(7).
-Características generales de los modelos epidemiológicos
-Los modelos epidemiológicos buscan representar cómo se infectan los individuos de una población y cómo progresa la enfermedad infecciosa en cada uno de ellos. A pesar de la diversidad de modelos epidemiológicos actuales, todos los modelos describen el fenómeno como cambios de estados individuales o poblacionales que en modelación se conocen como variables de estado, estos estados representan momentos clínicos o infecciosos que experimentan los individuos (por ejemplo: ser susceptible, luego ser infeccioso y posteriormente, recuperarse o morir) ver Figura 1 costado izquierda. El tránsito y en general la relación entre las variables de estado depende de elementos del modelo llamados parámetros que condicionan el cambio entre, por ejemplo, e estado infectado a recuperado (ver FIgura 1 costado derecha).
+Hoy en día existen varias aproximaciones computacionales para describir procesos epidémicos.
+En primer lugar están __los modelos compartimentales__ y sus sofisticaciones, los cuales están
+basados en ecuaciones diferenciales ordinarias y cuentan con más de cien años de historia.
+Pero además, existen otras aproximaciones metodológicas como lo son __los modelos estocásticos__,
+__los modelos basados en datos__ y __los modelos basados en agentes__.
 
+## Historia
 
-Figura 1.  Representación de los elementos de un modelo epidemiológico para describir la progresión de la enfermedad en los individuos en un caso en el cual, una vez los individuos sanos se infectan, pueden recuperarse o morir. A mano izquierda están destacadas en negrilla las variables de estado, que para este ejemplo serían las variables de estado Susceptibles, Infectados y Recuperado. A mano derecha están descritos los parámetros específicos para este modelo que serían la taas de infección, la tasa de recuperación, la tasas de pérdida de inmunidad y la tasa de mortalidad.
+Los modelos matemáticos en epidemiología nacen con __los modelos compartimentales__.
+Durante las primeras décadas del siglo XX, no solo ocurrió una catastrófica pandemia de influenza
+acompañada de recurrentes brotes de otras enfermedades infecciosas alrededor del mundo --como el cólera,
+tifo o peste--; sino también durante estos años fue que se desarrollaron los primeros modelos matemáticos
+epidemiológicos. La formulación de estos modelos fue posible luego de que fueran establecidos algunos
+patrones básicos a los brotes epidémicos como la relación entre la propagación de la epidemia con el número
+de personas susceptibles y de personas infecciosas <sup id="backref3">[3](#ref3)</sup> <sup id="backref4">[4](#ref4)</sup>.
 
-Diferentes tipos de modelos epidemiológicos abordan el sistema a diferentes escalas de resolución como es común entre los modelos usados para representar dinámicas poblacionales. Este tipo de resolución es específica al nivel de separación o unión que hace el modelador sobre los elementos constituyentes del sistema y recibe el nombre de granularidad. Es así como un fenómeno epidemiológico puede ser representado por modelos que describen la dinámica de la población en términos de: el resultado del comportamiento de cada uno de sus individuos (microescala) o modelos de granularidad alta; la interacción de ensambles de individuos (mesoescala) o modelos de granularidad media; o el flujo entre grandes subgrupos poblacionales (macroescala) o granularidad baja. (Ver Figura 1) 
+El trabajo de Ross en malaria (1911) <sup id="backref5">[5](#ref5)</sup> fue un trabajo pionero al
+matematizar por medio de un conjunto de ecuaciones la dinámica de la relación entre el número de infectados
+y el número de mosquitos en el ambiente, principio que si bien hoy resulta casi que intuitivo, en la época
+era imposible de establecer a simple vista. Posteriormente, la colaboración entre Ross y la matemática
+Hilda Hudson (1916) permitió comprender los patrones para diseñar diferentes modelos. Gracias a estos desarrollos,
+se formaliza la epidemiología matemática con el trabajo de MacKendrick y Kermack (1927) <sup id="backref6">[6](#ref6)</sup>,
+quienes consolidaron este concepto, proponiendo un modelo que relaciona la propagación con el número de personas
+susceptibles e infectadas. Para lograrlo, separaron a la población en compartimientos o grupos según el estado
+infeccioso de los individuos, es decir, en los grupos susceptibles, infectados y recuperados; el tránsito
+entre los compartimientos se formuló a través de ecuaciones diferenciales ordinarias. 
+
+Para algunos investigadores, los fundamentos de las intervenciones en salud pública nacen con
+__los modelos compartimentales__ debido a que permiten resolver preguntas sobre el número de infectados
+y el tiempo que puede durar un brote epidémico <sup id="backref7">[7](#ref7)</sup>.
+
+## Características generales de los modelos epidemiológicos
+
+Los modelos epidemiológicos buscan representar cómo se infectan los individuos de una población y cómo
+progresa la enfermedad infecciosa en cada uno de ellos. A pesar de la diversidad de modelos epidemiológicos
+actuales, todos los modelos describen el fenómeno como cambios de estados individuales o poblacionales, que
+en modelación se conocen como variables de estado. Estos estados representan momentos clínicos o infecciosos
+que experimentan los individuos, como por ejemplo ser susceptible, luego ser infeccioso y posteriormente 
+recuperarse o morir (ver [Figura 1](#fig1) costado izquierda). El tránsito y en general la relación entre
+las variables de estado depende de elementos del modelo llamados parámetros que condicionan el cambio
+entre, por ejemplo, el estado infectado al recuperado (ver [Figura 1](#fig1) costado derecha).
+
+{% include image.html img="./images/Figura1.png" id="fig1" title="Figura 1" caption="Representación de los elementos de un modelo epidemiológico para describir la progresión de la enfermedad en los individuos en un caso en el cual, una vez los individuos sanos se infectan, pueden recuperarse o morir. A mano izquierda están destacadas en negrilla las variables de estado, que para este ejemplo serían las variables de estado Susceptibles, Infectados y Recuperado. A mano derecha están descritos los parámetros específicos para este modelo que serían la taas de infección, la tasa de recuperación, la tasas de pérdida de inmunidad y la tasa de mortalidad." %}
+
+Diferentes tipos de modelos epidemiológicos abordan el sistema a diferentes escalas de resolución como es
+común entre los modelos usados para representar dinámicas poblacionales. Este tipo de resolución es específica al nivel de separación o unión que hace el modelador sobre los elementos constituyentes del sistema y recibe el nombre de granularidad. Es así como un fenómeno epidemiológico puede ser representado por modelos que describen la dinámica de la población en términos de: el resultado del comportamiento de cada uno de sus individuos (microescala) o modelos de granularidad alta; la interacción de ensambles de individuos (mesoescala) o modelos de granularidad media; o el flujo entre grandes subgrupos poblacionales (macroescala) o granularidad baja. (Ver Figura 1) 
 
 
 
@@ -80,68 +126,103 @@ Tabla XX.
 En este capítulo se realizará una descripción detallada de los modelos clásicos compartimentales y sus variaciones. De igual manera, se abordaran los modelos basados en agentes (MBA).
 
 
-[^1] Frigg R, Hartmann S. Models in Science. In: Zalta EN, editor. The Stanford Encyclopedia of Philosophy. Spring 2020. Metaphysics Research Lab, Stanford University; 2020. Available at: https://plato.stanford.edu/archives/spr2020/entries/models-science/
+## Referencias
 
-[^2] Peschard I. Making sense of modeling: beyond representation. Eur J Philos Sci. 2011 Oct;1(3):335–52.
+<a id="ref1">1</a>: Frigg R, Hartmann S. Models in Science. In: Zalta EN, editor. The Stanford Encyclopedia of Philosophy [Internet]. Spring 2020. Metaphysics Research Lab, Stanford University; 2020. Available at: https://plato.stanford.edu/archives/spr2020/entries/models-science/  
+    [↩](#backref1)
 
-[^3] Brauer F, Castillo-Chavez C, Feng Z. Simple compartmental models for disease transmission. In: Texts in Applied Mathematics. New York, NY: Springer New York; 2019. p. 21–61. (Texts in applied mathematics).
+<a id="ref2">2</a>: Peschard I. Making sense of modeling: beyond representation. Eur J Philos Sci. 2011 Oct;1(3):335–52.  
+    [↩](#backref2)
 
-[^4] Anderson W. The history in epidemiology. Int J Epidemiol. 2019 Jun 1;48(3):672–4.
+<a id="ref3">3</a>: Brauer F, Castillo-Chavez C, Feng Z. Simple compartmental models for disease transmission. In: Texts in Applied Mathematics. New York, NY: Springer New York; 2019. p. 21–61. (Texts in applied mathematics).  
+    [↩](#backref3)
 
-[^5] Bacaër N. Ross and malaria (1911). In: A Short History of Mathematical Population Dynamics. London: Springer London; 2011. p. 65–9.
+<a id="ref4">4</a>: Anderson W. The history in epidemiology. Int J Epidemiol. 2019 Jun 1;48(3):672–4.  
+    [↩](#backref4)
 
-[^6] Bacaër N. McKendrick and Kermack on epidemic modelling (1926–1927). In: A Short History of Mathematical Population Dynamics. London: Springer London; 2011. p. 89–96.
+<a id="ref5">5</a>: Bacaër N. Ross and malaria (1911). In: A Short History of Mathematical Population Dynamics. London: Springer London; 2011. p. 65–9.  
+    [↩](#backref5)
 
-[^7] Weiss H (howie). The SIR model and the Foundations of Public Health. Materials . 2013;0001–17.
+<a id="ref6">6</a>: Bacaër N. McKendrick and Kermack on epidemic modelling (1926–1927). In: A Short History of Mathematical Population Dynamics. London: Springer London; 2011. p. 89–96.  
+    [↩](#backref6)
 
-[^8] Bacaer N. A short history of mathematical population dynamics. 2011th ed. London, England: Springer; 2010. 160 p.
+<a id="ref7">7</a>: Weiss H (howie). The SIR model and the Foundations of Public Health. Materials . 2013;0001–17.  
+    [↩](#backref7)
 
-[^9] Brooks RJ, Tobias AM. Choosing the best model: Level of detail, complexity, and model performance. Math Comput Model. 1996 Aug;24(4):1–14.
+<a id="ref8">8</a>: Bacaer N. A short history of mathematical population dynamics. 2011th ed. London, England: Springer; 2010. 160 p.  
+    [↩](#backref8)
 
-[^10] Vespignani A, Tian H, Dye C, Lloyd-Smith JO, Eggo RM, Shrestha M, et al. Modelling COVID-19. Nat Rev Phys. 2020 Jun;2(6):279–81.
+<a id="ref9">9</a>: Brooks RJ, Tobias AM. Choosing the best model: Level of detail, complexity, and model performance. Math Comput Model. 1996 Aug;24(4):1–14.  
+    [↩](#backref9)
 
-[^11] Rahimi I, Chen F, Gandomi AH. A review on COVID-19 forecasting models. Neural Comput Appl. 2021 Feb 4;1–11.
+<a id="ref10">10</a>: Vespignani A, Tian H, Dye C, Lloyd-Smith JO, Eggo RM, Shrestha M, et al. Modelling COVID-19. Nat Rev Phys. 2020 Jun;2(6):279–81.  
+    [↩](#backref10)
 
-[^12] Brauer F, Castillo-Chavez C, Feng Z. Endemic disease models. In: Texts in Applied Mathematics. New York, NY: Springer New York; 2019. p. 63–116. (Texts in applied mathematics).
+<a id="ref11">11</a>: Rahimi I, Chen F, Gandomi AH. A review on COVID-19 forecasting models. Neural Comput Appl. 2021 Feb 4;1–11.
+    [↩](#backref11)
 
-[^13] Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM. Mathematical modeling as a tool for policy decision making: Applications to the COVID-19 pandemic. In: Handbook of Statistics. Elsevier; 2021. p. 291–326. (Handbook of statistics).
+<a id="ref12">12</a>: Brauer F, Castillo-Chavez C, Feng Z. Endemic disease models. In: Texts in Applied Mathematics. New York, NY: Springer New York; 2019. p. 63–116. (Texts in applied mathematics).  
+    [↩](#backref12)
 
-[^14] Massonis G, Banga JR, Villaverde AF. Structural identifiability and observability of compartmental models of the COVID-19 pandemic. Annu Rev Control [Internet]. 2020 Dec 21; Available from: http://dx.doi.org/10.1016/j.arcontrol.2020.12.001
+<a id="ref13">13</a>: Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM. Mathematical modeling as a tool for policy decision making: Applications to the COVID-19 pandemic. In: Handbook of Statistics. Elsevier; 2021. p. 291–326. (Handbook of statistics).  
+    [↩](#backref13)
 
-[^15] Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257.
+<a id="ref14">14</a>: Massonis G, Banga JR, Villaverde AF. Structural identifiability and observability of compartmental models of the COVID-19 pandemic. Annu Rev Control [Internet]. 2020 Dec 21; Available from: http://dx.doi.org/10.1016/j.arcontrol.2020.12.001  
+    [↩](#backref14)
 
-[^16] Keeling MJ, Rohani P. Modeling Infectious Diseases in Humans and Animals. Princeton University Press; 2008. 366 p.
+<a id="ref15">15</a>: Pourmalek F, Rezaei Hemami M, Janani L, Moradi-Lakeh M. Rapid review of COVID-19 epidemic estimation studies for Iran. BMC Public Health. 2021 Feb 1;21(1):257.  
+    [↩](#backref15)
 
-[^17] Piqueira JRC. Rumor propagation model: An equilibrium study. Math Probl Eng. 2010;2010:1–7.
+<a id="ref16">16</a>: Keeling MJ, Rohani P. Modeling Infectious Diseases in Humans and Animals. Princeton University Press; 2008. 366 p.  
+    [↩](#backref16)
 
-[^18] Brauer F, van den Driessche P, Wu J. Mathematical Epidemiology. Springer Science & Business Media; 2008. 414 p.
+<a id="ref17">17</a>: Piqueira JRC. Rumor propagation model: An equilibrium study. Math Probl Eng. 2010;2010:1–7.  
+    [↩](#backref17)
 
-[^19] Yan P, Chowell G. Quantitative Methods for Investigating Infectious Disease Outbreaks [Internet]. Texts in Applied Mathematics. 2019. Available from: http://dx.doi.org/10.1007/978-3-030-21923-9
+<a id="ref18">18</a>: Brauer F, van den Driessche P, Wu J. Mathematical Epidemiology. Springer Science & Business Media; 2008. 414 p.  
+    [↩](#backref18)
 
-[^20] Guan J, Wei Y, Zhao Y, Chen F. Modeling the transmission dynamics of COVID-19 epidemic: a systematic review. J Biomed Res. 2020 Oct 30;34(6):422–30.
+<a id="ref19">19</a>: Yan P, Chowell G. Quantitative Methods for Investigating Infectious Disease Outbreaks [Internet]. Texts in Applied Mathematics. 2019. Available from: http://dx.doi.org/10.1007/978-3-030-21923-9  
+    [↩](#backref19)
 
-[^21] Pribylova L, Hajnova V. SEIAR model with asymptomatic cohort and consequences to efficiency of quarantine government measures in COVID-19 epidemic [Internet]. 2020 [cited 2021 Mar 31]. Available from: http://arxiv.org/abs/2004.02601
+<a id="ref20">20</a>: Guan J, Wei Y, Zhao Y, Chen F. Modeling the transmission dynamics of COVID-19 epidemic: a systematic review. J Biomed Res. 2020 Oct 30;34(6):422–30.  
+    [↩](#backref20)
 
-[^22] Victor Okhuese A. Estimation of the Probability of Reinfection With COVID-19 by the Susceptible-Exposed-Infectious-Removed-Undetectable-Susceptible Model. JMIR Public Health Surveill. 2020 May 13;6(2):e19097.
+<a id="ref21">21</a>: Pribylova L, Hajnova V. SEIAR model with asymptomatic cohort and consequences to efficiency of quarantine government measures in COVID-19 epidemic [Internet]. 2020 [cited 2021 Mar 31]. Available from: http://arxiv.org/abs/2004.02601  
+    [↩](#backref21)
 
-[^23] Zhao S, Chen H. Modeling the epidemic dynamics and control of COVID-19 outbreak in China. Quant Biol. 2020 Mar 11;1–9.
+<a id="ref22">22</a>: Victor Okhuese A. Estimation of the Probability of Reinfection With COVID-19 by the Susceptible-Exposed-Infectious-Removed-Undetectable-Susceptible Model. JMIR Public Health Surveill. 2020 May 13;6(2):e19097.  
+    [↩](#backref22)
 
-[^24] Giordano G, Blanchini F, Bruno R, Colaneri P, Di Filippo A, Di Matteo A, et al. Modelling the COVID-19 epidemic and implementation of population-wide interventions in Italy. Nat Med. 2020 Jun;26(6):855–60.
+<a id="ref23">23</a>: Zhao S, Chen H. Modeling the epidemic dynamics and control of COVID-19 outbreak in China. Quant Biol. 2020 Mar 11;1–9.  
+    [↩](#backref23)
 
-[^25] Fosu GO, Opong JM, Appati JK. Construction of compartmental models for COVID-19 with quarantine, lockdown and vaccine interventions. SSRN Electron J [Internet]. 2020; Available from: https://www.ssrn.com/abstract=3574020
+<a id="ref24">24</a>: Giordano G, Blanchini F, Bruno R, Colaneri P, Di Filippo A, Di Matteo A, et al. Modelling the COVID-19 epidemic and implementation of population-wide interventions in Italy. Nat Med. 2020 Jun;26(6):855–60.  
+    [↩](#backref24)
 
-[^26] Chen S, Robinson P, Janies D, Dulin M. Four Challenges Associated With Current Mathematical Modeling Paradigm of Infectious Diseases and Call for a Shift. Open Forum Infect Dis. 2020 Aug;7(8):ofaa333.
+<a id="ref25">25</a>: Fosu GO, Opong JM, Appati JK. Construction of compartmental models for COVID-19 with quarantine, lockdown and vaccine interventions. SSRN Electron J [Internet]. 2020; Available from: https://www.ssrn.com/abstract=3574020  
+    [↩](#backref25)
 
-[^27] Railsback SF, Grimm V. Agent-Based and Individual-Based Modeling: A Practical Introduction, Second Edition. Princeton University Press; 2019.
+<a id="ref26">26</a>: Chen S, Robinson P, Janies D, Dulin M. Four Challenges Associated With Current Mathematical Modeling Paradigm of Infectious Diseases and Call for a Shift. Open Forum Infect Dis. 2020 Aug;7(8):ofaa333.  
+    [↩](#backref26)
 
-[^28] Cuevas E. An agent-based model to evaluate the COVID-19 transmission risks in facilities. Comput Biol Med. 2020 Jun;121:103827.
+<a id="ref27">27</a>: Railsback SF, Grimm V. Agent-Based and Individual-Based Modeling: A Practical Introduction, Second Edition. Princeton University Press; 2019.  
+    [↩](#backref27)
 
-[^29] Hoertel N, Blachier M, Blanco C, Olfson M, Massetti M, Rico MS, et al. A stochastic agent-based model of the SARS-CoV-2 epidemic in France. Nat Med. 2020 Sep;26(9):1417–21.
+<a id="ref28">28</a>: Cuevas E. An agent-based model to evaluate the COVID-19 transmission risks in facilities. Comput Biol Med. 2020 Jun;121:103827.  
+    [↩](#backref28)
 
-[^30] Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM. Mathematical modeling as a tool for policy decision making: Applications to the COVID-19 pandemic [Internet]. Handbook of Statistics. 2021. p. 291–326. Available from: http://dx.doi.org/10.1016/bs.host.2020.12.001
+<a id="ref29">29</a>: Hoertel N, Blachier M, Blanco C, Olfson M, Massetti M, Rico MS, et al. A stochastic agent-based model of the SARS-CoV-2 epidemic in France. Nat Med. 2020 Sep;26(9):1417–21.  
+    [↩](#backref29)
 
-[^31] Truszkowska A, Behring B, Hasanyan J, Zino L, Butail S, Caroppo E, et al. COVID‐19 Modeling: High‐Resolution Agent‐Based Modeling of COVID‐19 Spreading in a Small Town (Adv. Theory Simul. 3/2021) [Internet]. Vol. 4, Advanced Theory and Simulations. 2021. p. 2170005. Available from: http://dx.doi.org/10.1002/adts.202170005
+<a id="ref30">30</a>: Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM. Mathematical modeling as a tool for policy decision making: Applications to the COVID-19 pandemic [Internet]. Handbook of Statistics. 2021. p. 291–326. Available from: http://dx.doi.org/10.1016/bs.host.2020.12.001  
+    [↩](#backref30)
 
-[^32] Gaudou B, Huynh NQ, Philippon D, Brugière A, Chapuis K, Taillandier P, et al. COMOKIT: A Modeling Kit to Understand, Analyze, and Compare the Impacts of Mitigation Policies Against the COVID-19 Epidemic at the Scale of a City [Internet]. Vol. 8, Frontiers in Public Health. 2020. Available from: http://dx.doi.org/10.3389/fpubh.2020.563247
+<a id="ref31">31</a>: Truszkowska A, Behring B, Hasanyan J, Zino L, Butail S, Caroppo E, et al. COVID‐19 Modeling: High‐Resolution Agent‐Based Modeling of COVID‐19 Spreading in a Small Town (Adv. Theory Simul. 3/2021) [Internet]. Vol. 4, Advanced Theory and Simulations. 2021. p. 2170005. Available from: http://dx.doi.org/10.1002/adts.202170005  
+    [↩](#backref31)
 
-[^33] Mahdizadeh Gharakhanlou N, Hooshangi N. Spatio-temporal simulation of the novel coronavirus (COVID-19) outbreak using the agent-based modeling approach (case study: Urmia, Iran). Inform Med Unlocked. 2020 Jul 30;20:100403.
+<a id="ref32">32</a>: Gaudou B, Huynh NQ, Philippon D, Brugière A, Chapuis K, Taillandier P, et al. COMOKIT: A Modeling Kit to Understand, Analyze, and Compare the Impacts of Mitigation Policies Against the COVID-19 Epidemic at the Scale of a City [Internet]. Vol. 8, Frontiers in Public Health. 2020. Available from: http://dx.doi.org/10.3389/fpubh.2020.563247  
+    [↩](#backref32)
+
+<a id="ref33">33</a>: Mahdizadeh Gharakhanlou N, Hooshangi N. Spatio-temporal simulation of the novel coronavirus (COVID-19) outbreak using the agent-based modeling approach (case study: Urmia, Iran). Inform Med Unlocked. 2020 Jul 30;20:100403.  
+    [↩](#backref33)
