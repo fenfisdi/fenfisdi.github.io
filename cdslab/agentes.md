@@ -26,7 +26,7 @@ Es importante aclarar que, el algoritmo actualiza en cada paso de tiempo (i.e. t
 
 ### 1. Mecanismos asociados al encuentro entre agentes
 
-En cada momento del tiempo los agentes están ubicados explícitamente en el espacio, es decir, tienen una posición espacial que inicialmente es aleatoria ([Fig. 1A](#Fig.1A)) y que posteriormente se va actualizando en cada paso de tiempo. Esta actualización de la posición, o movimiento de los agentes, se lleva a cabo siguiendo una _**distribución de velocidades**_ que describe un  patrón particular de movimiento  ([Fig.1B](#Fig.1B)). La posición y las velocidades determinan los perfiles de movilidad de los agentes (i.e. algunos se mueven mucho, otros poco). Las dimensiones del espacio en el que se mueven los agentes se ajustan de tal manera que se conserve una **densidad poblacional** deseada. Por ejemplo, para mantener una densidad de 0.0125 habitantes por metro cuadrado con 1000 agentes se debe configurar un área de 282 metros de **longitud horizontal** por 282 metros de **longitud vertical** del espacio ([Fig.1C](#Fig.1C)).
+En cada momento del tiempo los agentes están ubicados explícitamente en el espacio, es decir, tienen una posición espacial que inicialmente es aleatoria ([Fig. 1A](#Fig.1A)) y que posteriormente se va actualizando en cada paso de tiempo. Esta actualización de la posición, o movimiento de los agentes, se lleva a cabo siguiendo una _**distribución de velocidades**_ que describe un  patrón particular de movimiento  ([Fig.1B](#Fig.1B)). La posición y las velocidades determinan los perfiles de movilidad de los agentes (i.e. algunos se mueven mucho, otros poco). Las dimensiones del espacio en el que se mueven los agentes se ajustan de tal manera que se conserve una _**densidad poblacional**_ deseada. Por ejemplo, para mantener una densidad de 0.0125 habitantes por metro cuadrado con 1000 agentes se debe configurar un área de 282 metros de _**longitud horizontal**_ por 282 metros de _**longitud vertical**_ del espacio ([Fig.1C](#Fig.1C)).
 
 _**Figura 1.** Mecanismos que determinan los encuentros entre los agentes._
 {: style="text-align: center;"}
@@ -36,18 +36,21 @@ _**Figura 1.** Mecanismos que determinan los encuentros entre los agentes._
 </a>
 
 _**Fig.1A:** Esquema que captura la posición de los agentes en el espacio en cierto tiempo._
+{: style="font-size: 80%;"}
 
 <a id="Fig.1B">
     <img src="./images/agentes/f1b.jpg" alt="Fig.1B">
 </a>
 
 _**Fig.1B:** Distribución de velocidades de los agentes (extraído de encuestas origen destino para el 2017 en Medellín  <sup id="backref6">[6](#ref6)</sup> <sup id="backref7">[7](#ref7)</sup>)._
+{: style="font-size: 80%;"}
 
 <a id="Fig.1C">
     <img src="./images/agentes/f1c.jpg" alt="Fig.1C">
 </a>
 
 _**Fig.1C:** Dimensiones del espacio para mil agentes con densidad poblacional de 0.0125 habitantes por metro cuadrado._
+{: style="font-size: 80%;"}
 
 Lo anterior determina los encuentros o interacciones directas (i.e. por contacto) o indirectas (i.e. transmisión por aerosoles) entre los agentes y por tanto influye en la dinámica de contagio. Sin embargo, el contagio o la infección de los agentes depende de otros mecanismos que se describen más adelante. Finalmente, los parámetros asociados a estos mecanismos se describen en la [Tabla 1](#Tabla1).
 
@@ -56,6 +59,31 @@ Lo anterior determina los encuentros o interacciones directas (i.e. por contacto
 </a>
 
 _**Tabla 1.** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes_
+{: style="font-size: 80%;"}
+
+### 2. Mecanismos asociados al contagio
+
+Los eventos de infección o contagio se pueden dar en cada paso del tiempo y de forma general se llevan a cabo de la siguiente manera. En primer lugar a los agentes infectados se les asocia un _**radio de dispersión**_ del virus o _**radio de contagio**_ (i.e. este determina un área alrededor de la cual el agente emite partículas virales) ([Fig. 2](#Fig.2)). Note que el tamaño de este radio da cuenta de la infecciosidad del agente infectado y del espacio particular donde este se encuentra, de tal manera que, radios más grandes equivalen a variantes virales más transmisibles y la transmisión en espacios cerrados poco ventilados.
+
+<a id="Fig.2">
+    <img src="./images/agentes/f2.jpg" alt="Fig.2">
+</a>
+
+_**Figura 2:** Mecanismos asociados al contagio. **IZQUIERDA**  El escenario de no-contagio se da cuando el agente susceptible (verde) acata la norma de distanciamiento.  **DERECHA** El escenario de contagio se da cuando el agente susceptible (verde) entra en el radio de dispersión del agente infectado (rojo)._
+{: style="font-size: 80%;"}
+
+Luego, la posición espacial de cada agente susceptible (i.e. agente que se puede infectar) y su distancia con respecto a un agente infectado determina si el susceptible está dentro o fuera del radio de contagio. Esta posición además de estar dada por el movimiento del agente, como se explicó previamente, también depende del _comportamiento_ del mismo. Es decir, cada agente tiene asociado una probabilidad de acatar las normas de distanciamiento social (o _**probabilidad de estar alerta**_), y por tanto, una probabilidad de estar dentro o fuera del radio de contagio.  Aquellos individuos que acatan las normas de distanciamiento tienen a su vez asignado un _**radio de evasión**_ que debe ser más grande que el radio de contagio ([Fig. 2](#Fig.2)).
+
+Finalmente, cuando un susceptible entra en el radio de dispersión de un agente infectado se da lugar a un posible contagio. Este es un evento probabilístico que depende del _**nivel de susceptibilidad**_ y el _**nivel de inmunidad**_ del agente susceptible y el nivel de infecciosidad (o _**probabilidad de dispersar el virus**_ ) del infectado. En la [Tabla 2](#Tabla2) podemos observar los parámetros asociados al contagio.
+
+<a id="Tabla2">
+    <img src="./images/agentes/t2.jpg" alt="Tabla 2">
+</a>
+
+_**Tabla 2.** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes._
+{: style="font-size: 80%;"}
+
+
 
 ## Referencias
 
