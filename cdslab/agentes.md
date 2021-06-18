@@ -58,7 +58,7 @@ Lo anterior determina los encuentros o interacciones directas (i.e. por contacto
     <img src="./images/agentes/t1.jpg" alt="Tabla 1">
 </a>
 
-_**Tabla 1.** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes_
+_**Tabla 1:** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes_
 {: style="font-size: 80%;"}
 
 ### 2. Mecanismos asociados al contagio
@@ -80,10 +80,28 @@ Finalmente, cuando un susceptible entra en el radio de dispersión de un agente 
     <img src="./images/agentes/t2.jpg" alt="Tabla 2">
 </a>
 
-_**Tabla 2.** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes._
+_**Tabla 2:** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes._
 {: style="font-size: 80%;"}
 
+### 3. Mecanismos asociados al desenlace de la infección-enfermedad
 
+Una vez contagiado, un agente transita a través de una serie de **estados que describen la historia natural** de la infección-enfermedad. En la [Figura 3](#Fig.3) se muestra una configuración particular de la historia natural, pero el algoritmo permite configurar otras versiones. En cada uno de estos estados los agentes permanecen por un tiempo que se  asigna a cada uno de forma aleatoria e independiente y según una **distribución de tiempos** de permanencia o tiempos de vida media por estado ([Fig. 3](#Fig.3)).  Una vez ha transcurrido el tiempo en un estado los  agentes transitan a un siguiente estado según una **probabilidad de transición**.
+
+<a id="Fig.3">
+    <img src="./images/agentes/f3.jpg" alt="Fig.3">
+</a>
+
+_**Figura 3:**  Una posible versión de la historial natural de la infección del COVID-19. Se indican los estados y las conexiones entre estos (flechas negras), las probabilidades de transición (valores cerca de las flechas, el valor es 1 cuando no hay un número cerca de una flecha), y los tiempos de permanencia en cada estado (esquina inferior derecha). La latencia (L) es el periodo durante el cual el agente, aunque infectado, no es contagioso. Por el contrario, en el periodo de infecciosidad (I) estan todos los agentes infecciosos que aún se encuentran incubando el virus, o son asintomáticos o sintomáticos leves. Posteriormente los agentes se pueden recuperar (R) o agravar ocupando una cama de hospital y/o UCI (H, U). Desde estos últimos dos estados los agentes pueden recuperarse o morir (M)._
+{: style="font-size: 80%;"}
+
+En este punto es importante aclarar varias cosas. Primero, en el diagrama de la [Figura 3](#Fig.3) no  incluyen re-infecciones, en caso de que se quiera configurar una versión que sí incluya este factor solo se debe adicionar una transición del estado Recuperado al estado Susceptible. Segundo, la suma total de las probabilidades de transición de un estado a los estados inmediatamente siguientes deber ser uno (i.e. para la figura 3 la transición del estado I al R es 0.81 y del I al H es 0.19, en total 1). Tercero, en cada paso de tiempo el algoritmo actualiza el estado de los agentes y  esto depende, como se mencionó previamente, de los tiempos de permanencia en cada estado y de las probabilidades de transición. Las cuales a su vez dependen de las características de cada agente (como veremos en la siguiente sesión). Finalmente, las **variables de estado** del modelo son los estados descritos en la historia natural y la incidencia de casos nuevos en cada paso de tiempo.
+
+<a id="Tabla3">
+    <img src="./images/agentes/t3.jpg" alt="Tabla 3">
+</a>
+
+_**Tabla 3:** Parámetros asociados a los mecanismos que determinan el desenlace de la infección - enfermedad._
+{: style="font-size: 80%;"}
 
 ## Referencias
 
