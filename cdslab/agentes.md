@@ -103,6 +103,35 @@ En este punto es importante aclarar varias cosas. Primero, en el diagrama de la 
 _**Tabla 3:** Parámetros asociados a los mecanismos que determinan el desenlace de la infección - enfermedad._
 {: style="font-size: 80%;"}
 
+### 4. Mecanismos que describen una población heterogénea
+
+Las poblaciones simuladas pueden ser heterogéneas, es decir, pueden estar compuestas por un conjunto variado de agentes que difieren en **edad**, grado de **vulnerabilidad**, nivel de **susceptibilidad**, y nivel de **inmunidad**. La vulnerabilidad está definida como la mayor tendencia que tienen algunas personas a enfermarse gravemente y morir por la enfermedad, de esta manera, por nivel de vulnerabilidad se pueden ajustar diferentes probabilidades de transición y tiempos de permanencia entre los estados anteriormente mencionados.
+
+<a id="Fig.4">
+    <img src="./images/agentes/f4.jpg" alt="Fig.4">
+</a>
+
+_**Figura 4:** Grupos etarios y porcentaje de vulnerables por grupo para Medellín._
+{: style="font-size: 80%;"}
+
+<a id="Tabla4">
+    <img src="./images/agentes/t4.jpg" alt="Tabla 4">
+</a>
+
+_**Tabla 4:** Parámetros asociados a los mecanismos que describen la heterogeneidad de la población._
+{: style="font-size: 80%;"}
+
+### 5. Mecanismos asociados a la asistencia médica
+
+Para cada estado de la enfermedad y considerando el nivel de vulnerabilidad, se debe indicar si las personas transitando dicho estado requieren una cama hospitalaria o una Unidad de Cuidados Intensivos (UCI). Además, se debe indicar la cantidad de camas hospitalarias y de UCI que se encuentran disponibles. Con esta información el algoritmo actualiza en cada paso de tiempo la ocupación de estos recursos de asistencia médica. A partir de esto se pueden tomar decisiones de salud pública como decretar cuarentena, lo cual se describirá en la siguiente sección.
+
+<a id="Tabla5">
+    <img src="./images/agentes/t5.jpg" alt="Tabla 5">
+</a>
+
+_**Tabla 5:** Parámetros asociados a la asistencia médica._
+{: style="font-size: 80%;"}
+
 ## Referencias
 
 <a id="ref1">1</a>: Sloan PR. Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research. William Bechtel , Robert C. Richardson [Internet]. Vol. 85, Isis. 1994. p. 746–7. Available from: http://dx.doi.org/10.1086/357068
