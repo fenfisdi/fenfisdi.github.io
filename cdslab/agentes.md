@@ -8,38 +8,74 @@ nav_order: 3
 
 ## Introducción
 
-Un modelo epidemiológico basado en agentes permite simular una sociedad virtual de agentes (i.e. personas) que se infectan con un virus, como el SARS-CoV-2, cuando interactúan directa (i.e. por contacto) o indirectamente (i.e. transmisión por aerosoles) con una persona infecciosa. El objetivo de este modelo es hacer análisis exploratorios de los mecanismos involucrados en la transmisión y desenlaces de la enfermedad en una población. De esta manera el modelo no usa para predecir las dinámicas de la epidemia (i.e. el número de casos incidentes en los próximos días de una epidemia). Para más información sobre los modelos basados en agentes recomendamos la lectura del capítulo 1 del documento [_Epidemiología Matemática y COVID-19_](https://drive.google.com/file/d/1wPA1rOsiBwY_1y3Lgl9fNhL09NeRVpNX/view).
+Nuestro modelo epidemiológico basado en agentes permite simular una sociedad virtual de agentes (i.e. personas) que se infectan con un virus, como el SARS-CoV-2, cuando interactúan directa (i.e. por contacto) o indirectamente (i.e. transmisión por aerosoles) con una persona infecciosa. Para obtener un entendimiento más detallado sobre los modelos epidemiológicos basados en agentes recomendamos la lectura del capítulo 1 del documento [_Epidemiología Matemática y COVID-19_](https://drive.google.com/file/d/1wPA1rOsiBwY_1y3Lgl9fNhL09NeRVpNX/view), escrito por nuestros investigadores. El objetivo de nuestro modelo es hacer análisis exploratorios de los mecanismos involucrados en la transmisión y desenlaces de la enfermedad en una población. De esta manera, el modelo no se usa para predecir las dinámicas de la epidemia (i.e. el número de casos incidentes en los próximos días de una epidemia), para lo cual son más apropiados los modelos compartimentales tipo SIR.
 
-Un mecanismo está compuesto por elementos (o entidades) que realizan operaciones (o actividades) organizadas para producir el fenómeno de interés <sup id="backref1">[1](#ref1)</sup> <sup id="backref2">[2](#ref2)</sup> <sup id="backref3">[3](#ref3)</sup>. Al momento de incluir un mecanismo en el modelo debemos conocer y entender sus componentes y las conexiones entre ellos. El modelo nos permite comprender cómo los elementos del mecanismo operan y cómo se afectan unas con otras, pero además cómo afectan y se ven afectadas por los elementos de otros mecanismos <sup id="backref3">[3](#ref3)</sup>.
+Ahora bien, un mecanismo está compuesto por elementos (o entidades) que realizan operaciones (o actividades) organizadas para producir el fenómeno de interés<sup id="backref1">[1](#ref1)</sup> <sup id="backref2">[2](#ref2)</sup> <sup id="backref3">[3](#ref3)</sup>. Al momento de incluir un mecanismo en un modelo debemos conocer sus componentes. Por su parte, el modelo nos permite comprender cómo los elementos del mecanismo operan y cómo se afectan unos con otros, pero además cómo afectan y se ven afectadas por los elementos de otros mecanismos <sup id="backref3">[3](#ref3)</sup>.
 
-Pensemos, por ejemplo, en los elementos que componen el mecanismo de transmisión del SARS-CoV-2. Un primer elemento son las rutas de transmisión, que para este virus principalmente son aerosoles y microgotas contaminadas con el virus que emite la persona infectada <sup id="backref4">[4](#ref4)</sup>. Un segundo elemento son las condiciones del espacio donde interactúan las personas, por ejemplo, en espacios poco ventilados la transmisión por aerosoles podría tener una mayor importancia que las demás rutas <sup id="backref5">[5](#ref5)</sup>. Un tercer elemento tiene que ver con el comportamiento de las personas, es decir, dependiendo del nivel de acatamiento de las medidas de bioseguridad, se podría dar lugar o no a un posible contagio <sup id="backref5">[5](#ref5)</sup><sup id="backref6">[6](#ref6)</sup>. Y un último elemento importante es el grado de infecciosidad de la persona contagiada, el cual depende a su vez del nivel de transmisibilidad de la variante del virus y del tiempo que ha transcurrido desde que la persona se infecta con el virus <sup id="backref6">[7](#ref7)</sup>.
+Pensemos, por ejemplo, en los elementos que componen el mecanismo de transmisión del SARS-CoV-2. Un primer elemento son las rutas de transmisión, que para este virus principalmente son aerosoles y microgotas contaminadas con el virus que emite la persona infectada <sup id="backref4">[4](#ref4)</sup>. Un segundo elemento son las condiciones del espacio donde interactúan las personas, por ejemplo, en espacios poco ventilados la transmisión por aerosoles podría tener una mayor importancia que las demás rutas de transmisión <sup id="backref4">[4](#ref4)</sup>. Un tercer elemento tiene que ver con el comportamiento de las personas, es decir, dependiendo del nivel de acatamiento de las medidas de bioseguridad, se podría dar lugar o no a un posible contagio <sup id="backref4">[4](#ref4)</sup> <sup id="backref5">[5](#ref5)</sup>. Y un último elemento importante es el grado de infecciosidad de la persona contagiada, el cual depende a su vez del nivel de transmisibilidad de la variante del virus y del tiempo que ha transcurrido desde que la persona se infecta con el virus <sup id="backref5">[5](#ref5)</sup>.
 
-Como nos pudimos dar cuenta, para incluir un mecanismo en un modelo debemos tener un conocimiento más o menos detallado del mismo. Pero además, el nivel de detalle que se requiera depende de la pregunta que el investigador desea responder con el modelo. Teniendo esto en cuenta, se diseñó un algoritmo computacional lo más general posible que permitiera configurar diferentes elementos de los mecanismos, el cual hace parte de la librería [_Contagious Disease Simulation_](https://github.com/fenfisdi/cdslab). Con este se pueden diseñar diferentes modelos epidemiológicos basados en agentes para analizar las dinámicas de la epidemia (con mecanismos similares a la epidemia del COVID-19) en una ciudad  o en un lugar determinado dentro de una ciudad.
+Como nos pudimos dar cuenta, para incluir un mecanismo en un modelo debemos tener un conocimiento más o menos detallado del mismo. Pero además, el nivel de detalle que se requiera depende de la pregunta que el investigador desea responder con el modelo. Teniendo esto en cuenta, diseñamos un algoritmo computacional que permitiera configurar diferentes elementos de los mecanismos más importantes de la transmisión y desenlaces de la enfermedad. Esta configuración dependerá de las necesidades, preguntas y objetivos del investigador. El algoritmo se encuentra en la librería de acceso libre [_Contagious Disease Simulation_](https://github.com/fenfisdi/cdslab). Con este se pueden diseñar diferentes modelos epidemiológicos basados en agentes para analizar las dinámicas de una epidemia (con mecanismos similares a la epidemia del COVID-19) en una ciudad  o en un lugar determinado dentro de una ciudad.
 
-Conceptualmente el algoritmo se divide en dos partes. La primera tiene que ver con los mecanismos asociados a la transmisión y desenlace de la enfermedad y la segunda incluye algunas estrategias farmacológicas y no-farmacológicas para mitigar o contener la epidemia. La primera parte se divide a su vez en cuatro  grupos de mecanismos. El primero son aquellos que determinan los encuentros entre las personas (i.e. densidad y movilidad), el segundo tiene que ver con los determinantes del contagio (i.e. radio de dispersión del virus, comportamiento de las personas, nivel de infecciosidad, y nivel de susceptibilidad), el tercero describe la historia natural de la enfermedad de las personas contagiadas, y el cuarto permite caracterizar cada una de las personas y construir una sociedad heterogénea (i.e. diferentes edades, vulnerabilidades, susceptibilidades).
+Conceptualmente el algoritmo se divide en dos partes. La primera consiste de los mecanismos asociados a la transmisión y desenlace de la enfermedad.  La segunda incluye algunas estrategias farmacológicas y no-farmacológicas para mitigar o contener la epidemia. La primera parte se divide a su vez en cuatro  grupos de mecanismos. El primero son aquellos que determinan los encuentros entre las personas (i.e. densidad y movilidad); el segundo, tiene que ver con los determinantes del contagio (i.e. radio de dispersión del virus, comportamiento de las personas, nivel de infecciosidad, y nivel de susceptibilidad); el tercero, describe la historia natural de la enfermedad de las personas contagiadas; y el cuarto, permite caracterizar cada una de las personas y construir una sociedad heterogénea (i.e. diferentes edades, vulnerabilidades, susceptibilidades).
+
+## Parte I: Mecanismos y parámetros de transmisión y desenlace de la enfermedad
+
+En esta parte se describen los mecanismos incluidos en el algoritmo que permiten dar cuenta de las dinámicas de infección por el virus SARS-CoV-2 y los desenlaces de la enfermedad COVID-19. Como veremos el algoritmo es flexible y por tanto se puede usar para simular otras epidemias similares a la epidemia del COVID-19. En el [anexo 1](https://docs.google.com/document/d/1jBnrZ86xJQS-fT1CTl2pREDldh5hPzVAH2mYe7iZaA0/edit?usp=sharing) podemos ver ejemplos de los análisis que se pueden hacer modificando algunos parámetros.
+
+Es importante aclarar que, el algoritmo actualiza en cada paso de tiempo (i.e. tiempo discreto) todos los procesos asociados a los mecanismos que se describen a continuación (e.g. cambiar la posición de los agentes, determinar si un agente se contagia o no, cambiar el estado de los agentes, etc). La escala temporal de cada paso de tiempo debe se ajustada desde el inicio, indicando a cuantas horas  corresponde cada paso temporal. Por ejemplo, si un paso temporal equivale a un día se debe ajustar como 24 horas. Adicionalmente, para ajustar los parámetros que indiquen temporalidad (e.g. las distribuciones de tiempo de permanencia en los estados -ver Mecanismos 3-) se debe considerar dicha escala temporal.
+
+### 1. Mecanismos asociados al encuentro entre agentes
+
+En cada momento del tiempo los agentes están ubicados explícitamente en el espacio, es decir, tienen una posición espacial que inicialmente es aleatoria ([Fig. 1A](#Fig.1A)) y que posteriormente se va actualizando en cada paso de tiempo. Esta actualización de la posición, o movimiento de los agentes, se lleva a cabo siguiendo una _**distribución de velocidades**_ que describe un  patrón particular de movimiento  ([Fig.1B](#Fig.1B)). La posición y las velocidades determinan los perfiles de movilidad de los agentes (i.e. algunos se mueven mucho, otros poco). Las dimensiones del espacio en el que se mueven los agentes se ajustan de tal manera que se conserve una **densidad poblacional** deseada. Por ejemplo, para mantener una densidad de 0.0125 habitantes por metro cuadrado con 1000 agentes se debe configurar un área de 282 metros de **longitud horizontal** por 282 metros de **longitud vertical** del espacio ([Fig.1C](#Fig.1C)).
+
+_**Figura 1.** Mecanismos que determinan los encuentros entre los agentes._
+{: style="text-align: center;"}
+
+<a id="Fig.1A">
+    <img src="./images/agentes/f1a.jpg" alt="Fig.1A">
+</a>
+
+_**Fig.1A:** Esquema que captura la posición de los agentes en el espacio en cierto tiempo._
+
+<a id="Fig.1B">
+    <img src="./images/agentes/f1b.jpg" alt="Fig.1B">
+</a>
+
+_**Fig.1B:** Distribución de velocidades de los agentes (extraído de encuestas origen destino para el 2017 en Medellín  <sup id="backref6">[6](#ref6)</sup> <sup id="backref7">[7](#ref7)</sup>)._
+
+<a id="Fig.1C">
+    <img src="./images/agentes/f1c.jpg" alt="Fig.1C">
+</a>
+
+_**Fig.1C:** Dimensiones del espacio para mil agentes con densidad poblacional de 0.0125 habitantes por metro cuadrado._
+
+Lo anterior determina los encuentros o interacciones directas (i.e. por contacto) o indirectas (i.e. transmisión por aerosoles) entre los agentes y por tanto influye en la dinámica de contagio. Sin embargo, el contagio o la infección de los agentes depende de otros mecanismos que se describen más adelante. Finalmente, los parámetros asociados a estos mecanismos se describen en la [Tabla 1](#Tabla1).
+
+<a id="Tabla1">
+    <img src="./images/agentes/t1.jpg" alt="Tabla 1">
+</a>
+
+_**Tabla 1.** Parámetros asociados a los mecanismos que determinan los encuentros o interacciones entre los agentes_
 
 ## Referencias
 
-<a id="ref1">1</a>: Sloan, Phillip R. 1994. “Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research. William Bechtel , Robert C. Richardson.” Isis. https://doi.org/10.1086/357068.
+<a id="ref1">1</a>: Sloan PR. Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research. William Bechtel , Robert C. Richardson [Internet]. Vol. 85, Isis. 1994. p. 746–7. Available from: http://dx.doi.org/10.1086/357068
     [↩](#backref1)
 
-<a id="ref2">2</a>: Bechtel, William, and Adele Abrahamsen. 2005. “Explanation: A Mechanist Alternative.” Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences. https://doi.org/10.1016/j.shpsc.2005.03.010.
+<a id="ref2">2</a>: Bechtel W, Abrahamsen A. Explanation: a mechanist alternative [Internet]. Vol. 36, Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences. 2005. p. 421–41. Available from: http://dx.doi.org/10.1016/j.shpsc.2005.03.010
     [↩](#backref2)
 
-<a id="ref3">3</a>: Bechtel, William, and Adele A. Abrahamsen. 2013. “Mechanism, Dynamic.” Encyclopedia of Systems Biology. https://doi.org/10.1007/978-1-4419-9863-7_72.
+<a id="ref3">3</a>: Bechtel W, Abrahamsen AA. Mechanism, Dynamic [Internet]. Encyclopedia of Systems Biology. 2013. p. 1204–7. Available from: http://dx.doi.org/10.1007/978-1-4419-9863-7_72
     [↩](#backref3)
 
-<a id="ref4">4</a>: Greenhalgh, Trisha, Jose L. Jimenez, Kimberly A. Prather, Zeynep Tufekci, David Fisman, and Robert Schooley. 2021a. “Ten Scientific Reasons in Support of Airborne Transmission of SARS-CoV-2.” The Lancet 397 (10285): 1603–5.
+<a id="ref4">4</a>: Greenhalgh T, Jimenez JL, Prather KA, Tufekci Z, Fisman D, Schooley R. Ten scientific reasons in support of airborne transmission of SARS-CoV-2. Lancet. 2021 May 1;397(10285):1603–5.
     [↩](#backref4)
 
-<a id="ref5">5</a>: ———. 2021b. “Ten Scientific Reasons in Support of Airborne Transmission of SARS-CoV-2.” The Lancet 397 (10285): 1603–5.
+<a id="ref5">5</a>: GVN. How Long Is A SARS-CoV-2 Infected Person Contagious? [Internet]. 2020 [cited 2021 May 20]. Available from: https://gvn.org/how-long-is-a-sars-cov-2-infected-person-contagious/
     [↩](#backref5)
 
-<a id="ref6">6</a>: GVN. 2020. “How Long Is A SARS-CoV-2 Infected Person Contagious?” October 23, 2020. https://gvn.org/how-long-is-a-sars-cov-2-infected-person-contagious/.
+<a id="ref6">6</a>: Área Metropolitana del Valle de Aburrá [Internet]. [cited 2020 Dec 2]. Available from: https://datosabiertos.metropol.gov.co/dataset/encuesta-origen-destino-2017-datos-por-hogares
     [↩](#backref6)
 
-<a id="ref7">7</a>: ———. 2021c. “Ten Scientific Reasons in Support of Airborne Transmission of SARS-CoV-2.” The Lancet 397 (10285): 1603–5.
+<a id="ref7">7</a>: Área Metropolitana del Valle de Aburrá [Internet]. [cited 2020 Dec 2]. Available from: https://datosabiertos.metropol.gov.co/dataset/encuesta-origen-destino-2017-datos-por-viajes
     [↩](#backref7)
-
-<a id="ref1">1</a>: “Tableau Public.” n.d. Accessed December 2, 2020. https://public.tableau.com/profile/medata#!/vizhome/COVID19_Medellin/COVID19_Medellin.
-    [↩](#backref1)
