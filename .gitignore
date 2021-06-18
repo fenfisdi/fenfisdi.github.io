@@ -4,4 +4,6 @@ assets
 _layouts
 _sass
 lib
-
+.vscode/
+Gemfile*
+.DS_Store
