@@ -132,6 +132,100 @@ Para cada estado de la enfermedad y considerando el nivel de vulnerabilidad, se 
 _**Tabla 5:** Parámetros asociados a la asistencia médica._
 {: style="font-size: 80%;"}
 
+## Parte II: Estrategias farmacológicas y no-farmacológicas de mitigación o contención
+
+En esta parte se describen las estrategias farmacológicas y no-farmacológicas de mitigación o contención que se pueden simular con este algoritmo. Como veremos el algoritmo es flexible y por tanto se puede usar para simular una variedad de estrategias. En el [anexo 2](https://docs.google.com/document/d/1PHj3pt_Q3VRVQsPkRHERgbTzWvyxIGTtv8jvcb1TfzI/edit?usp=sharing) podemos ver ejemplos de algunas estrategias evaluadas. Adicionalmente, algunas estrategias se pueden aplicar a grupos particulares y previamente definidos. Es decir, se pueden formar grupos por edades, por nivel de vulnerabilidad, susceptibilidad, o inmunidad, a los cuales se les aplica las estrategias de forma diferencial como veremos más adelante.
+
+### 1. Diagnostico
+
+El modelo permite evaluar el efecto del diagnóstico sobre las dinámicas de infección. Para lo cual se considera la **probabilidad que tienen los individuos de ser diagnosticados** dependiendo del estado (ver Mecanismos 3) en el que se encuentren, es decir, un enfermo grave a diferencia de un asintomático tendrá mayor **probabilidad de ser diagnosticado** ([Tabla 6](#Tabla6)). Además se incluye el **tiempo que permanece aislado** un agente diagnosticado como positivo para el virus ([Tabla 5](#Tabla5)).
+
+<a id="Tabla6">
+    <img src="./images/agentes/t6.jpg" alt="Tabla 6">
+</a>
+
+_**Tabla 6:** Parámetros asociados al diagnóstico._
+{: style="font-size: 80%;"}
+
+### 2. Cuarentenas decretadas en diferentes tiempos
+
+El modelo permite decretar cuarentenas por ventanas de tiempo de cierta duración a uno o varios grupos de la población. Asi pues, se puede ajustar un solo grupo que entra y sale de cuarentena estricta por periodos de tiempo, o se pueden ajustar varios grupos que entran y salen de cuarentena estricta por periodos de tiempo. En las Figuras [5](#Fig.5) y [6](#Fig.6) se dan algunos ejemplos de estas estrategias y en la [Tabla 7](#Tabla7) se describen los parámetros que se deben ajustar.
+
+<a id="Fig.5">
+    <img src="./images/agentes/f5.jpg" alt="Fig.5">
+</a>
+
+_**Figura 5:** Estrategias cíclicas o de acordeón.  A manera de ejemplo, se  representa la estrategia 3/4 con tres días de cierre y cuatro de apertura de las actividades sociales y económicas._
+{: style="font-size: 80%;"}
+
+<a id="Fig.6">
+    <img src="./images/agentes/f6.jpg" alt="Fig.6">
+</a>
+
+_**Figura 6:** Representación gráfica de las estrategias de pico y cédula.  En la imagen se representan dos estrategias: a la **IZQUIERDA** la estrategia con dos grupos (2G) y a la **DERECHA** la estrategia con tres grupos (3G). CIERRE indica que el grupo no está activo y no puede movilizarse libremente, y APERTURA indica que el grupo está activo y  puede movilizarse libremente. La barra numérica indica el tiempo en días._
+{: style="font-size: 80%;"}
+
+<a id="Tabla7">
+    <img src="./images/agentes/t7.jpg" alt="Tabla 7">
+</a>
+
+_**Tabla 7:** Parámetros asociados a las cuarentenas decretadas en diferentes tiempos._
+{: style="font-size: 80%;"}
+
+### 3. Cuarentenas decretadas según ocupación del sistema de salud
+
+El algoritmo permite para uno o diferentes grupos de la población decretar cuarentenas cuando los recurso hospitalarios (i.e. camas de hospital y UCI) han sobrepasado un umbral de ocupación. En la [Tabla 8](#Tabla8) se  describen los parámetros que se deben ajustar.
+
+<a id="Tabla8">
+    <img src="./images/agentes/t8.jpg" alt="Tabla 8">
+</a>
+
+_**Tabla 8:** Parámetros asociados a las cuarentenas decretadas según ocupación del sistema de salud. * Estos mismos parámetros aplican para la ocupación de UCIs._
+{: style="font-size: 80%;"}
+
+### 4. Cuarentenas decretadas según variables poblacionales
+
+El algoritmo permite para uno o diferentes grupos de la población decretar cuarentenas cuando algunas variables poblacionales (i.e. número de muertos por la enfermedad y número de diagnosticados) han sobrepasado un umbral. En la [Tabla 9](#Tabla9) se  describen los parámetros que se deben ajustar.
+
+<a id="Tabla9">
+    <img src="./images/agentes/t9.jpg" alt="Tabla 9">
+</a>
+
+_**Tabla 9:** Parámetros asociados a las cuarentenas decretadas según variables poblacionales. * Estos mismos parámetros aplican para las cuarentenas decretadas por número de diagnosticados._
+{: style="font-size: 80%;"}
+
+## Resumen del proceso y planeación
+
+Los siguientes diagramas resumen los procesos de los cuales se compone el algoritmo (Figuras [7a](#Fig.7a)-[7d](#Fig.7d)).
+
+<a id="Fig.7a">
+    <img src="./images/agentes/f7a.jpg" alt="Fig.7a">
+</a>
+
+_**Figura 7a:**  Diagrama general del orden de  los procesos._
+{: style="font-size: 80%;"}
+
+<a id="Fig.7b">
+    <img src="./images/agentes/f7b.jpg" alt="Fig.7b">
+</a>
+
+_**Figura 7b:**  Diagrama general de los procesos 1 al 4._
+{: style="font-size: 80%;"}
+
+<a id="Fig.7c">
+    <img src="./images/agentes/f7c.jpg" alt="Fig.7c">
+</a>
+
+_**Figura 7c:**  Diagrama general de los procesos 5 al 6._
+{: style="font-size: 80%;"}
+
+<a id="Fig.7d">
+    <img src="./images/agentes/f7d.jpg" alt="Fig.7d">
+</a>
+
+_**Figura 7d:**  Diagrama general de los procesos 7 al 8._
+{: style="font-size: 80%;"}
+
 ## Referencias
 
 <a id="ref1">1</a>: Sloan PR. Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research. William Bechtel , Robert C. Richardson [Internet]. Vol. 85, Isis. 1994. p. 746–7. Available from: http://dx.doi.org/10.1086/357068
