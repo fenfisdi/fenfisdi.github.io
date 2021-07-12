@@ -57,7 +57,13 @@ modelos:
 Nuestros modelos computacionales además de poseer bases algorítmicas funcionales y que
 pueden utilizadas de forma independiente y manipuladas mediante su interface en Python,
 cuentan con una plataforma web, en la cual los investigadores podrán crear una cuenta y
-realizar las simulaciones deseadas. Esta plataforma web también se brinda como parte del
+realizar las simulaciones deseadas. A continuación se listan algunos videos con tutoriales
+de uso de la plataforma:
+
+- [Cómo crear una cuenta - Tutorial CDSLab](https://youtu.be/kCc4AFqQRRY)
+- [Cómo crear un modelo SIR (ejemplo 1) - Tutorial CDSLab](https://youtu.be/ik1f8NxHqe8)
+
+Esta plataforma web también se brinda como parte del
 proyecto de código abierto y puede ser implementada de forma directa siguiendo las
 instrucciones adjuntas en cada uno de sus módulos. Para realizar esta tarea de la forma
 deseada, hemos dispuesto de un tipo de arquitectura de software conocida como
