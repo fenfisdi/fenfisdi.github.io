@@ -134,3 +134,25 @@ capacidades requeridas para realizar el cómputo con los parámetros solicitados
 - [CDSLab_agents_simulation](https://github.com/fenfisdi/cdslab_agents_simuliation_api)
   quien es el encargado de comunicarse de forma directa con la librería de
 [CDSLib_agents](https://github.com/fenfisdi/cdslib_agents).
+
+
+## Arquitectura en la nube
+
+ ![Arquitectura API Cloud](arquitectura-APICloud.png)
+
+Para asegurar un escalamiento de la cantidad de agentes que se pueden simular, se ha
+decidido utilizar una arquitectura basada en servicios de Google Cloud. A continuación
+se explica el flujo de su funcionamiento y los elementos responsables de cada paso:
+
+1. **Api Cloud**, al Api le llega como parámetro:
+  - Parámetros de Simulación.
+  - Recursos de Maquinas
+  - Cantidad de Maquinas
+2. **Api Cloud**, identifica los archivos en **OnPremise** que deben ser enviados a **CloudStorage de Parámetros**.
+3. **Api Cloud**, se crean tantas máquinas virtuales como lo indique el parámetro de ingreso y se envían el diccionario de datos, a cada una.
+4. **Api Cloud**, se suben a **CloudStorage de Parametros** los archivos requeridos para simulación.
+5. **ApiAgentBasedMode**, ejecuta el modelo basado en agentes con el diccionario y los archivos de parámetros leídos desde el **CloudStorage de Parámetros**.
+6. **ApiAgentBasedModel**, al finalizar la simulación almacena los resultados en el **CloudStorage de Resultados**. Esta api notifica al **ApiCloud** que terminó la ejecución.
+7. **ApiCloud**, al tener el reporte de finalización de todas las simulaciones, crea una máquina donde corre **ApiConsolidateAgentBasedModel**.
+8. **ApiConsolidateAgentBasedModel**, lee los N resultado de la simulación, ejecuta su  lógica, y generará unos archivos de salida.
+9. **ApiConsolidateAgentBasedModel**, se encarga de copiar los archivos resultados de la simulación en infraestructura **onPremise**.
